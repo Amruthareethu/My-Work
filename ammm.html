@@ -1,0 +1,86 @@
+
+<html>
+    <head>
+  <style>
+    /* div.li{
+        text-decoration: none;
+    } */
+    
+
+  </style>
+      
+</head>
+
+
+<body>
+
+       <div  style="text-decoration: none; color: deeppink;text-align: center;"    >  
+        <img src="">
+
+     <li ></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li> <br> <br>
+    <button id="star">go back</button>
+
+
+    </div>  
+      
+
+    
+    <script>
+          
+
+
+        var eee=localStorage.getItem("reeethu");
+        var eee1=JSON.parse(eee);
+        console.log(eee1);
+    
+let aaa=document.querySelectorAll("li");
+    aaa[0].innerText=eee1["id"]; 
+          aaa[1].innerText=eee1["title"];
+           aaa[2].innerText=eee1["price"];
+          aaa[3].innerText=eee1["description"]; 
+           aaa[4].innerText=eee1["category"];
+
+    
+let adk=document.querySelector("img");
+   adk.setAttribute("src",eee1["image"]);
+  adk.style.width="150px" 
+  adk.style.height="150px";
+  adk.style.textAlign="center";
+
+
+        // go back
+  var sta=document.getElementById("star");
+   star.addEventListener("click",function() {
+    window.open("./jsshopping.html","_self")
+    
+   })
+       
+
+   
+
+          
+      
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+    

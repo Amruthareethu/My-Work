@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <script>
+
+    var t="amrutha"
+             p=[]
+     for(k=0;k<t.length;k++){
+         count=1
+     for(j=k+1;j<t.length;j++){
+         if(t[k]==t[j]){
+            p[j]=-1
+         count=count+1
+  }
+}
+      if(p[k]!=-1){
+        p[k]=count
+}
+}
+  for(k=0;k<t.length;k++){
+    if(p[k]!=-1){
+     console.log(t[k]+ "--"+p[k])
+
+   }
+}
+</script>
+    </body>
+</html>

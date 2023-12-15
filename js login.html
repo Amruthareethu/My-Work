@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+     body{
+                /* background-image: url("/230817122249-01-eiffel-tower-081623-file.jpg") ; */
+     /* background-image:url("/desktop-wallpaper-blue-color-backgrounds-plane-colour-background-thumbnail.jpg  " );
+     background-repeat: no-repeat;
+     background-attachment: fixed; */
+                         
+    background-image:url("/desktop-wallpaper-blue-color-backgrounds-plane-colour-background-thumbnail.jpg  " );
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     }
+            .note{
+                position: relative;
+                height: 200px;
+                width: 300px;
+                margin-left:550px ;
+                /* text-align: center; */
+                background-color:deeppink;
+                margin-top: 230px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="note">
+           <center> <h2>Login</h2></center>
+        <form action="" >   
+
+ <label for="username"><b>Username:</b></label>
+ <input type="text" id="username" name="username" required><br /> <br>
+
+
+<label for="email"><b>Email:</b></label>
+ <input type="email" id="email" name="email" required /><br /> <br>
+  <span  style="color: red; display: none; ">email ends with @gmail.com</span> 
+
+
+
+<label for="password"><b>Password:</b></label>
+ <input type="password" id="password" name="password"  /><br /> <br>
+
+ <center>    <input type="submit" value="submit"><br><br></center>
+
+</div>
+</form>
+
+
+<script>
+console.log(document.forms[0]);
+
+ document.forms[0].addEventListener("submit",function(e){
+ e.preventDefault();
+        
+ let username = e.target.username.value;
+let  email = e.target.email.value;
+let  password = e.target.password.value;
+          
+
+ if (!email.endsWith("@gmail.com")) {
+
+      }else{
+        let span1=document.querySelector("span");
+        span1.style.block="display";
+        span1.style.color="red";
+
+
+      }
+      window.open("jsshopping.html","_self")
+
+
+ })
+
+    
+
+        </script>
+
+    </body>
+</html>

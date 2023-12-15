@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        background-color:lightgrey;
+      }
+      .car{
+        position: relative;
+        border: 2px solid black;
+        width: 350px;
+        height: 370px;
+        margin-left: 500px;
+        margin-top: 120px;
+        background-color: aqua;
+      }
+    </style>
+   </head>
+  <body>
+    <div class="car">
+      <center><u><h2 style="color: crimson;">Reistration form</h2></u></center>
+    <center>
+      <form action="" class="forms">
+     <b> User name:</b> <input type="text" id="username" name="username" required><br /> <br>
+        <span id="spa1" style="display: none;">Username should be 10 characters long and start with a </span>
+
+
+      <b> password:</b> <input type="password" id="password" name="password" required /><br /> <br>
+     <b>Confirm Password:</b>
+        <input type="password" id="confirmPassword" name="confirmPassword" required /><br /> <br>
+        <span id="spa2" style="display: none";>pasword and confirm password must match </span>
+
+
+     <b>  Date of birth:</b> <input type="date" id="dob" name="dob" required /><br /> <br>
+
+
+     
+     <b>Email:</b>  <input type="email" id="email" name="email" required /><br /> <br>
+     <span id="spa2" style="display: none";>enter the correct email </span>
+
+
+
+
+        <b>Mobile No:</b>
+        <input type="text" id="mobileNo" name="mobileNo" required /><br /> <br>
+
+         <input id="sub"   type="submit" value="submit" /><br><br> 
+         <input      type="button" value="reset" >
+      </form>
+
+    </center>
+    </div>
+    <script>
+      document.forms[0].addEventListener("submit", function (event) {
+        event.preventDefault();
+        let username = event.target[0].value;
+        let password = event.target[1].value;
+        let confirmPassword = event.target[2].value;
+        let dob = event.target[3].value;
+        let email = event.target[4].value;
+        let mobileNo = event.target[5].value;
+
+        if (username.length == 10 && username[0] == "a") {
+        document.getElementById("spa1")
+        event.target[0].style.border="block"
+        event.target[0].style.color="red"
+
+
+
+        }
+
+        if (password !==confirmPassword) {
+      //  alert("please enter correct username")
+      var  
+        }
+
+        if (!email.endsWith("@gmail.com")) {
+          alert("please enter correct format ");
+          return;
+        }
+
+        if (!(mobileNo.startsWith("9") && mobileNo.length === 10)) {
+          alert("Mobile number should start with '9' and be 10 digits");
+          return;
+        }
+
+        alert("Registration successful");
+      });
+
+
+
+    </script>
+  </body>
+</html>
